@@ -1,0 +1,22 @@
+version: '3.2'
+services:
+  main:
+    build: 
+      context: ./main
+      cache_from:
+        - alpine:latest
+        - golang:1.11
+    image: laroccacharly/mnist-main:1
+    ports:
+    - "80:100"
+    volumes:
+    - ./interface/build:/app/static
+  classifier:
+    build: 
+      context: ./classifier
+      cache_from:
+        - python_base:latest
+        - python:3.6
+    image: laroccacharly/mnist-classifier:1
+    volumes:
+    - ./classifier:/app

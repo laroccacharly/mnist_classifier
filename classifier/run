@@ -1,0 +1,2 @@
+#!/bin/bash
+docker run -p 90:80 --expose 90 -v `pwd`:/app laroccacharly/mnist-classifier:1 python main.py

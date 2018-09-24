@@ -1,0 +1,4 @@
+Flask
+tensorflow
+numpy==1.14.0
+pytest

@@ -1,0 +1,7 @@
+
+*.idea
+classifier/.pytest_cache
+classifier/__pycache__
+interface/build
+interface/node_modules
+vendor/
